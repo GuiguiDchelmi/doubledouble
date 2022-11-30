@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DOUBLE DOUBLE STUDIO
+{% endblock %}
+
+{% block body %}
+{% for projet in project %}
+<div class="titre-projet">
+	<h2> {{ projet.id }}//{{ projet.title }}</h2>
+</div>
+{% endfor %}
+
+{% endblock %}
+{% block footer %}
+	{% include "partials/_footer.html.twig" %}
+{% endblock %}
