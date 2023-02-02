@@ -3,20 +3,89 @@
 {% block title %}DOUBLE DOUBLE STUDIO
 {% endblock %}
 
-{% block body %}
-	<section>
-		<div>
-			<h2>CLIENTS</h2>
-		</div>
-		<div>
-			<h2>SERVICES</h2>
-		</div>
-		<div>
-			<h2>SNAKE</h2>
-		</div>
-	</section>
-{% endblock %}
 
-{% block footer %}
-	{% include "partials/_footer.html.twig" %}
+{% block body %}
+	{% block header %}
+		<div class="index">
+			{% include "partials/_header.html.twig" %}
+
+		{% endblock %}
+
+		<section class="section-index">
+			<div class="client">
+				<h2>Clients</h2>
+				<ul>
+					{% for project in projects %}
+					<li>{{ project.title }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="service">
+				<h2>Services</h2>
+				<ul>
+					<li>Architecture</li>
+					<li>Art</li>
+					<li>Art direction</li>
+					<li>Book</li>
+					<li>Brand identity</li>
+					<li>Campaign</li>
+					<li>Consulting</li>
+					<li>Creative strategy</li>
+					<li>Fashion</li>
+					<li>Ideation</li>
+					<li>Interior design</li>
+					<li>Magazine</li>
+					<li>Object</li>
+					<li>Publishing</li>
+					<li>Sceography</li>
+					<li>Textile</li>
+					<li>Typographie</li>
+					<li>Web</li>
+				</ul>
+			</div>
+			<div class="snake">
+				<div class="game">
+            <header class="centrer">
+                <h1 class="score" id="score">Score : 0</h1>
+                <p>
+                    <a class="left-button" id="pause">Pause</a>
+                    <a class="right-button" id="reset">Recommencer</a>
+                </p>
+            </header>
+
+            <section class="centrer col-lg-12">
+                <!-- Zone de jeu -->
+                <div id="game">
+                </div>
+
+                <!-- Menu principal -->
+                <div class="menu isoler-haut jumbotron" id="menu">
+                    <h1 class="game-title">Le jeu du serpent</h1>
+                    <p>Dirigez le serpent avec les flèches de votre clavier pour le faire manger et le faire grandir afin de réaliser le meilleur score.<br/>Si le serpent mord sa propre queue c'est perdu.</p>
+                    <p>
+                        <a class="left-button" id="start">Commencer</a>
+                    </p>
+                </div>
+
+                <!-- Game Over -->
+                <div id="end" class="isoler-haut jumbotron">
+                    <h1 class="game-title">Game Over !</h1>
+                    <p id="end-desc">Le serpent a mordu sa queue !</p>
+                    <p>
+                        <a class="left-button" id="restart">Recommencer</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer centrer isoler-haut">
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="{{ asset('js/snake.js') }}"></script>
+        <noscript>Quel dommage ! Votre navigateur ne supporte pas JavaScript... ou alors JavaScript a été désactivé.</noscript>
+			</div>
+		</section>
+	</div>
+
 {% endblock %}

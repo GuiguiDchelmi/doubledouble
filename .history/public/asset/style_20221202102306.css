@@ -1,0 +1,9 @@
+{% set red %}
+body {
+    color: red;
+}
+{% endset %}
+
+.home {
+    background-color: #10312B;
+}

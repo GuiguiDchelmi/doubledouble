@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DOUBLE DOUBLE STUDIO
+{% endblock %}
+
+{% block body %}
+{% block header %}
+<div class="add">
+	{% include "partials/_header.html.twig" %}
+{% endblock %}
+    <div class="title-add">
+        <h1>Ajouter un projet</h1>    
+    </div>
+    {{ form(form) }}
+
+{% endblock %}
+</div>
+{% block footer %}
+	{% include "partials/_footer.html.twig" %}
+{% endblock %}

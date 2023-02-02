@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: aqua;
+   }   
+   
+   .nav > nav:nth-child(1) > ul:nth-child(1) {
+    margin: 0;
+   }
+   
+
+.home {
+    background-color: #10312B;
+}
+
+h1 {
+    margin: 0;
+}

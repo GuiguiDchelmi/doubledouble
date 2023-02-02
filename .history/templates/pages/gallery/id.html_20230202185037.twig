@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DOUBLE DOUBLE STUDIO
+{% endblock %}
+
+{% block body %}
+	{% block header %}
+		{% include "partials/_header.html.twig" %}
+	{% endblock %}
+		{% for picture in pictures %}
+		{# {{ dump(picture) }} #}
+		<img src="../public/pictures/{{ picture }}" alt="projet">
+			{% endfor %}
+	{% block footer %}
+		{% include "partials/_footer.html.twig" %}
+	{% endblock %}
+{% endblock %}

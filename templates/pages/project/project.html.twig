@@ -3,28 +3,38 @@
 {% block title %}DOUBLE DOUBLE STUDIO
 {% endblock %}
 
+
 {% block body %}
-{% for message in app.flashes('success') %}
-		<div class="alert">
-			{{ message }}
+	{% block header %}
+		{% include "partials/_header.html.twig" %}
+	{% endblock %}
+		
+			<div class="project">
+		{% if app.user %}
+			<a class="add-button" href="{{ path('project.add') }}">Ajouter un projet</a>
+		{% endif %}
+		{% for message in app.flashes('success') %}
+			<div class="alert-success">
+				{{ message }}
+		{% endfor %}
 		</div>
-	{% endfor %}
-
-
-	{% if app.user %}
-		<a href="{{ path('project.add') }}">Ajouter un projet</a>
-	{% endif %}
-
-{% for project in projects %}
-<div class="titre-projet">
-	<h2> {{ project.id }}// {{ project.title }}</h2>
-	{% if app.user %}
-	<button><a href="{{ path('project.delete', { id: project.id }) }}">Delete</a></button>
-	{% endif %}
-</div>
-{% endfor %}
-
-{% endblock %}
-{% block footer %}
-	{% include "partials/_footer.html.twig" %}
+		</div>
+		<main class="container">
+		{% for project in projects %}
+			<section class="project-item">
+					<img src="../public{{ vich_uploader_asset(project, 'imageFile') }} " alt="projet">
+				<div class="project-options">
+					<h2>{{ project.id }} // {{ project.title }}</h2>
+				{% if app.user %}
+					<button class="delete">
+						<a href="{{ path('project.delete', { id: project.id }) }}">Delete</a>
+					</button>
+				{% endif %}
+				</div>
+			</section>
+		{% endfor %}
+	</main>
+	{% block footer %}
+		{% include "partials/_footer.html.twig" %}
+	{% endblock %}
 {% endblock %}

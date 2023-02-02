@@ -1,0 +1,40 @@
+/* équivalence "10px" sur l'élément racine */
+html {
+    font-size:62.5%;
+    height:100%;
+}
+
+body {
+    margin:0;
+    height:100%;
+}
+/* HEADER */
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header > nav > ul{
+    display:flex;
+    align-items: center;
+    padding: 0;
+    margin: 0, 1rem, 0 , 1rem;
+}
+
+.header > nav > ul > li {
+    list-style: none;
+    margin-right:2.8rem;
+}
+.header > nav > ul > li > a, .login > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #EFCF9C;
+    font-size:16px;
+}
+
+/* HOME */
+.home {
+    height: 100%;
+    background-color: #133A29;
+    color:#EFCF9C;
+}

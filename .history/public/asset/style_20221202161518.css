@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Helvetica Block Extended";
+    src: url("/fonts/helvetica_block_extended.eot");
+    src: url("/fonts/helvetica_block_extended.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/helvetica_block_extended-webfont.woff2") format("woff2"),
+      url("/fonts/helvetica_block_extended-webfont.woff") format("woff"),
+      url("/fonts/HelveticaNowDisplay-Regular.svg#HelveticaNowDisplay-Regular")
+        format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "HelveticaNowDisplay";
+    src: url("/fonts/HelveticaNowDisplay-Regular.eot");
+    src: url("/fonts/HelveticaNowDisplay-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      url("/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"),
+      url("/fonts/HelveticaNowDisplay-Regular.woff") format("woff"),
+      url("/fonts/HelveticaNowDisplay-Regular.svg#HelveticaNowDisplay-Regular")
+        format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+/* 62.5% of 16px browser font size is 10px */
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5.2rem 0 0 5.8rem;
+}
+
+.header>nav>ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header>nav>ul>li {
+    list-style: none;
+    margin-right: 2.8rem;
+}
+
+.header>nav>ul>li>a,
+.login>a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #EFCF9C;
+    font-size: 24px;
+}
+
+.login>a {
+    padding-right:1rem
+}
+/* HOME */
+.home {
+    height: 100%;
+    background-color: #133A29;
+    color: #EFCF9C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(./images/terrain.png);
+    background-repeat: no-repeat;
+    background-position: center bottom ;
+    background-size: 40%;
+}
+
+h1 {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.arrow {
+    text-align: center;
+    display: flex;
+    height:100px;
+}
+
+.arrow > img {
+    height:100%;
+    margin:auto;
+}

@@ -1,0 +1,31 @@
+html {
+    font-size:62.5%;
+    height:100%;
+}
+
+body {
+    margin:0;
+    height:100%;
+}
+/* HEADER */
+.header {
+    display:flex;
+}
+.header > nav > ul {
+    margin:0;
+}
+.header > nav > ul > li {
+    list-style: none;
+}
+.header > nav > ul > li > a, .login > a {
+    text-decoration: none;
+    color: #F2D19D;
+}
+
+
+/* HOME */
+.home {
+    height: 100%;
+    background-color: #10312B;;
+    color:#F2D19D;
+}

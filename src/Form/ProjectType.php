@@ -20,28 +20,29 @@ class ProjectType extends AbstractType
         $builder
         ->add('title', TextType::class, [
             'attr' => [
-                'class' => 'form',
+                'class' => 'add-form-case',
                 'minlength' => '2',
-                'maxlength' => '50'
+                'maxlength' => '55'
             ],
             'label' => 'Nom du projet',
             'label_attr' => [
-                'class' => 'form'
+                'class' => 'project-name'
             ],
             'constraints' => [
                 new Assert\Length(['min' => 2, 'max' =>55]),
-                new Assert\NotBlank()
             ]
         ])
         ->add('description', TextType::class, [
-            'attr' => [
-                'class' => 'form',
-                'minlength' => '2',
-                'maxlength' => '50'
-            ],
             'label' => 'Description',
             'label_attr' => [
-                'class' => 'form'
+                'class' => 'project-name'
+            ],
+            'attr' => [
+                'class' => 'add-form-case',
+                'minlength' => '2',
+                'maxlength' => '500',
+                'rows' => 1,
+                'cols' => 16
             ],
             'constraints' => [
                 new Assert\Length(['min' => 2, 'max' =>500]),
@@ -49,19 +50,25 @@ class ProjectType extends AbstractType
             ]
         ])
         ->add('createdAt', DateType::class, [
+            'attr' => [
+                'class' => 'add-form-case'
+            ],
+            'label_attr' => [
+                'class' => 'project-name'
+            ],
             'widget' => 'single_text',
             'input'  => 'datetime_immutable',
             'format' => 'yyyy-MM-dd'
         ])
         ->add('imageFile', VichImageType::class, [
-            'label' => 'Image du projet',
+            'label' => 'Photo du projet',
             'label_attr' => [
-                'class' => 'form-label mt-4'
+                'class' => 'project-name'
             ]
         ])
         ->add('submit', SubmitType::class, [
             'attr' => [
-                'class' => 'bouton'
+                'class' => 'valid-button'
             ],
             'label' => 'Ajouter mon projet'
         ]);

@@ -1,0 +1,26 @@
+html {
+    font-size:62.5%;
+}
+
+body {
+    margin:0;
+    color:#F2D19D;
+}
+
+.home, .nav-home {
+    background-color:#10312B;;
+}
+
+.arrow {
+    text-align:center;
+}
+
+ul {
+    margin:0;
+}
+
+
+
+h1 {
+    margin:0;
+}

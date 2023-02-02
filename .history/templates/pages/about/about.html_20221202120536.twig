@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DOUBLE DOUBLE STUDIO
+{% endblock %}
+
+
+
+{% block body %}
+{% block header %}
+	<div class="about">
+		{% include "partials/_header.html.twig" %}
+{% endblock %}
+	<section>
+		<div>
+			<p>Double double Studio est un bureau de direction créative et de conseils qui conçoit des images, des espaces, des vêtements, des campagnes, des objets.</p>
+			<p>Directeurs de la création, éditeurs, conservateurs, que fait Double Double Studio. Ils conçoivent des collections de vêtements,   dirigent des labels de disques, publient des livres d'art, dirigent des magazines et des campagnes, créent des           installations artistiques géantes, conçoivent des intérieurs ou des produits et établissent des stratégies créatives pour des entreprises internationales. Leur approche interculturelle leur a permis de travailler dans de nombreux domaines                 différents, notamment le design, la mode, la musique, la signalétique et l'architecture. Leur éthique est la représentation d’un monde en évolution. Un monde où la couleur est reine, où la différence est un atout, et non un obstacle à contourner.</p>
+		</div>
+		<div>
+			<div>
+				<h2>Contact</h2>
+				<a href="mailto:salut@doubledouble-studio.com">salut@doubledouble-studio.com</a>
+				<div>
+					<a href="https://www.facebook.com/mekconsulting.agency/" target="_blank">Facebook</a>
+					<a href="https://www.instagram.com/doubledouble_studio/" target="_blank">Instagram</a>
+					<a href="https://www.linkedin.com/company/doubledoublestudio/" target="_blank">Linkedin</a>
+				</div>
+
+
+			</div>
+			<div>
+				<h2>Adresse</h2>
+				<p>180, rue du Genevois - Bâtiment C
+					<br>73000 Chambéry</p>
+			</div>
+			<div>
+				<h2>Téléphone</h2>
+				<a href="tel:09 73 89 48 32">09 73 89 48 32</a>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}
+
+{% block footer %}
+	{% include "partials/_footer.html.twig" %}
+</div>
+{% endblock %}

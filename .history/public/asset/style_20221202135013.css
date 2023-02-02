@@ -1,0 +1,35 @@
+html {
+    font-size:62.5%;
+    height:100%;
+}
+
+body {
+    margin:0;
+    height:100%;
+}
+/* HEADER */
+.header > nav > ul{
+    display:flex;
+    align-items: center;
+    padding: 0;
+}
+
+.header > nav > ul {
+    margin:0;
+}
+.header > nav > ul > li {
+    list-style: none;
+    padding: 1rem;
+}
+.header > nav > ul > li > a, .login > a {
+    text-decoration: none;
+    color: #F2D19D;
+}
+
+
+/* HOME */
+.home {
+    height: 100%;
+    background-color: #10312B;;
+    color:#F2D19D;
+}

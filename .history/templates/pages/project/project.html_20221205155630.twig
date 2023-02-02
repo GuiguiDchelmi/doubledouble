@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DOUBLE DOUBLE STUDIO
+{% endblock %}
+
+
+{% block body %}
+	{% block header %}
+		<div class="project">
+			{% include "partials/_header.html.twig" %}
+	{% endblock %}
+	<div class="test">
+		{% for message in app.flashes('success') %}
+			<div class="alert add">
+				{{ message }}
+			</div>
+		{% endfor %}
+
+
+		{% if app.user %}
+			<a href="{{ path('project.add') }}">Ajouter un projet</a>
+		{% endif %}
+
+		{% for project in projects %}
+			<div class="project-title">
+				<h2>
+					{{ project.id }}//
+					{{ project.title }}</h2>
+				{% if app.user %}
+					<button>
+						<a href="{{ path('project.delete', { id: project.id }) }}">Delete</a>
+					</button>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+{% block footer %}
+	{% include "partials/_footer.html.twig" %}
+{% endblock %}
+		</div>
+{% endblock %}

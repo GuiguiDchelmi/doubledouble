@@ -1,0 +1,17 @@
+<div class="header">
+	<nav>
+		<ul>
+			<li><a href="{{ path('home') }}">Logo</a></li>
+			<li><a href="{{ path('project') }}">Projects</a></li>
+			<li><a href="{{ path('index') }}">Index</a></li>
+			<li><a href="{{ path('about') }}">About</a></li>
+		</ul>
+	</nav>
+<div class="login">
+	{% if app.user %}
+		<a href="{{ path('app_logout') }}">Logout</a>
+	{% else %}
+		<a href="{{ path('login') }}">Login</a>
+	{% endif %}
+</div>
+</div>

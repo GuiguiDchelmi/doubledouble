@@ -8,6 +8,7 @@ use App\Repository\ProjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -47,6 +48,8 @@ class ProjectController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+    
+    #[Security("is_granted('ROLE_ADMIN')")]
     #[Route('/project/delete/{id}', 'project.delete', methods: ['GET'])]
     public function delete(EntityManagerInterface $manager, Project $project): Response
     {

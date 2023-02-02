@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DOUBLE DOUBLE STUDIO
+{% endblock %}
+
+{% block body %}
+    {% block header %}
+			{% include "partials/_header.html.twig" %}
+		{% endblock %}
+    <h2 class="galleryh2">La gallerie de nos projets</h2>
+    <div class="project">
+		{% if app.user %}
+			<a class="add-button" href="{{ path('gallery.add') }}">Ajouter une image</a>
+		{% endif %}
+    {% for message in app.flashes('successPic') %}
+			<div class="alert-success">
+				{{ message }}
+		{% endfor %}
+		</div>
+    </div>
+    <main class="container">
+		{% for picture in pictures %}
+		{# {% for picture in arraypicture %}
+		{{ picture }} #}
+		  {# <div class="slide"><img src="../public{{ vich_uploader_asset(picture, 'imageFile') }} " alt="projet"></div> #}
+
+			<section class="picture-item">
+					<img src="../public{{ vich_uploader_asset(picture, 'imageFile') }} " alt="projet">
+				<div class="picture-options">
+					<h2>{{ picture.projectid }} // {{ picture.name }}</h2>
+				{% if app.user %}
+					<button class="delete">
+						<a href="{{ path('gallery.delete', { id: picture.id }) }}">Delete</a>
+					</button>
+				{% endif %}
+				</div>
+			</section> 
+			{% endfor %}
+		{% endfor %}
+	</main>
+{% block footer %}
+		{% include "partials/_footer.html.twig" %}
+	{% endblock %}
+{% endblock %}
+    
